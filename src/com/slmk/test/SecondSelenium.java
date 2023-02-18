@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SecondSelenium {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
         //refer:https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
@@ -23,13 +23,14 @@ public class SecondSelenium {
         } else {
             System.out.println("Test Failed");
         }
-        String pagesource = driver.getPageSource();
-        int p1 = pagesource.length();
 
-        System.out.println("The Page Title is " + title);
-        System.out.println("The Page Url is " + appUrl);
-        System.out.println(" The Page source code is " + pagesource);
-        System.out.println("The Length of Page source code is " + p1);
+        String sourcecode = driver.getPageSource();
+        int p1 = sourcecode.length();
+
+        System.out.println("The Page Title is " +title);
+        System.out.println("The Page Url is " +appUrl);
+        System.out.println(" The Page source code is " +sourcecode);
+        System.out.println("The Length of Page source code is " +p1);
 
         driver.close();
 
@@ -37,4 +38,5 @@ public class SecondSelenium {
         System.exit(0);
 
     }
+
 }
